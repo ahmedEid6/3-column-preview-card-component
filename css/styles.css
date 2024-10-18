@@ -1,0 +1,135 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --Transparent-white: hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+  --Very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--Very-light-gray);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+  width: 90%;
+  max-width: 920px;
+}
+
+.card {
+  padding: 5rem;
+  color: var(--Transparent-white);
+}
+
+.card1 {
+  background-color: var(--Bright-orange);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.card2 {
+  background-color: var(--Dark-cyan);
+}
+
+.card3 {
+  background-color: var(--Very-dark-cyan);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.card img {
+  max-width: 100%;
+  margin-bottom: 3rem;
+}
+
+.card h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--Very-light-gray);
+  font-size: 4.2rem;
+  margin-bottom: 3rem;
+}
+
+.card p {
+  font-size: 1.5rem;
+  margin-bottom: 8rem;
+  line-height: 1.7;
+}
+
+.card .btn {
+  border: none;
+  background-color: var(--Very-light-gray);
+  border: 2px solid var(--Very-light-gray);
+  padding: 1rem 3.5rem;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.card .btn:hover {
+  background-color: transparent;
+  color: var(--Very-light-gray);
+}
+
+.card .btn1 {
+  color: var(--Bright-orange);
+}
+
+.card .btn2 {
+  color: var(--Dark-cyan);
+}
+
+.card .btn3 {
+  color: var(--Very-dark-cyan);
+}
+
+@media (max-width: 668px) {
+  main {
+    padding-block: 5rem;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card1 {
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: initial;
+  }
+
+  .card3 {
+    border-top-right-radius: initial;
+    border-bottom-left-radius: 5px;
+  }
+
+  .card p {
+    margin-bottom: 3rem;
+  }
+}
